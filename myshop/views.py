@@ -9,3 +9,6 @@ def hello(request):
 class HelloView(View):
     def get(self, request):
         return HttpResponse("Hello, Class shopper!")
+    
+def catalog(request):
+    return render(request, 'catalog.html')
