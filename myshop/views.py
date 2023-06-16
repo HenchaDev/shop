@@ -3,8 +3,8 @@ from django.http import HttpResponse
 from django.views import View
 
 # Create your views here.
-def hello(request):
-    return HttpResponse("Hello, shopper!")
+def about(request):
+    return render(request, 'about.html')
 
 class HelloView(View):
     def get(self, request):
@@ -12,3 +12,6 @@ class HelloView(View):
     
 def catalog(request):
     return render(request, 'catalog.html')
+
+def contact(request):
+    return render(request, 'contact.html')
