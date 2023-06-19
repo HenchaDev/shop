@@ -24,7 +24,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a href="" class="navbar-brand">Shop</a>
+        <a href="{% url 'catalog' %}" class="navbar-brand">Shop</a>
         <button 
             class="navbar-toggler" 
             type="button" 
@@ -38,13 +38,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="{% url 'catalog' %}" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'about' %}" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Services</a>
+                    <a href="{% url 'services' %}" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
                     <a href="{% url 'contact' %}" class="nav-link">Contact</a>
@@ -61,7 +61,7 @@
                 {% endblock %}
             </div>
             <div class="col-md-6">
-                <p>main_content!</p>
+                {% include 'sidebar.html' with folders=folders %}
                 {% block main_content %}
 
                 {% endblock %}

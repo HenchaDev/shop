@@ -1,0 +1,10 @@
+{% extends 'catalog.html' %}
+
+
+    <h1>{{ folder.name }}</h1>
+
+    <ul>
+        {% for content in contents %}
+            <li>{{ content.name }}</li>
+        {% endfor %}
+    </ul>
