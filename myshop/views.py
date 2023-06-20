@@ -1,3 +1,5 @@
+
+from django.conf import settings
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
@@ -14,14 +16,3 @@ def catalog(request):
 
 def contact(request):
     return render(request, 'contact.html')
-
-def folder_contents(request, folder_id):
-    folder = Folder.objects.get(id=folder_id)
-    contents = folder.contents.all()
-
-    context = {
-        'folder': folder,
-        'contents': contents
-    }
-
-    return render(request, 'folder_contents.html', context)

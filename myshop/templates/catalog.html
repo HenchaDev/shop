@@ -19,6 +19,14 @@
             background-color: #f8f9fa;
             height: 100vh;
         }
+        .grid-item{
+            height: 150px;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+        .container{
+            margin-top: 10px;
+        }
 
     </style>
 </head>
@@ -56,14 +64,64 @@
         <div class="row">
             <div class="col-md-3 sidebar">
                 <p>Left sidebar</p>
-                {% block left_sidebar %}
-
-                {% endblock %}
+                
             </div>
             <div class="col-md-6">
-                {% include 'sidebar.html' with folders=folders %}
+               
                 {% block main_content %}
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card border-primary grid-item">
+                                <p>one</p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
                 {% endblock %}
             </div>
             <div class="col-md-3 sidebar">
