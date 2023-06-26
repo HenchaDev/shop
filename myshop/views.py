@@ -16,3 +16,7 @@ def catalog(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+def shoes(request):
+    return render(request, 'shoes.html')
